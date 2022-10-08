@@ -15,12 +15,19 @@ The rest depends on your project, see the next section for examples.
 **Simple web app:**
 
 - Run the script inside the project root directory
+- edit `static/pwa/manifest.json`
+
+```diff
+-      "src": "/pwa/favicon.png",
++      "src": "/static/pwa/favicon.png",
+```
+
 - Create `index.html`
 
 ```html
-<script defer src="./static/pwa/app.js"></script>
+<script defer src="/static/pwa/app.js"></script>
 <head>
-    <link rel="manifest" href="/pwa/manifest.json" />
+    <link rel="manifest" href="/static/pwa/manifest.json" />
 </head>
 <h1>hello</h1>
 ```
