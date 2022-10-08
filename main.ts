@@ -6,9 +6,8 @@ const main = async () => {
   const mainUrl = import.meta.url;
   const baseUrl = new URL(mainUrl.slice(0, mainUrl.lastIndexOf("/")));
   if (baseUrl.protocol === "file:") {
-    // stuff
+    throw "this script is intended to be used remotely for now";
   } else if (baseUrl.protocol === "https:") {
-    //extra
     const copyPwaRemoteAsset = async (name: string) => {
       await fetch(baseUrl.href + "/" + name).then((r) =>
         r.body?.pipeTo(
