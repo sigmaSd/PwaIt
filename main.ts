@@ -1,10 +1,27 @@
 import { ensureDirSync } from "https://deno.land/std@0.152.0/fs/ensure_dir.ts";
 
-const main = () => {
+const main = async () => {
   ensureDirSync("./static");
+
   const mainUrl = import.meta.url;
-  const baseUrl = mainUrl.slice(0,mainUrl.lastIndexOf("/"));
-  console.log(baseUrl);
+  const baseUrl = new URL(mainUrl.slice(0, mainUrl.lastIndexOf("/")));
+  if (baseUrl.protocol === "file:") {
+    // stuff
+  } else if (baseUrl.protocol === "https:") {
+    //extra
+    const copyPwaRemoteAsset = async (name: string) => {
+      await fetch(baseUrl.href + "/" + name).then((r) =>
+        r.body?.pipeTo(
+          Deno.createSync("./static/pwa" + "/" + name).writable,
+        )
+      );
+    };
+    await copyPwaRemoteAsset("app.js");
+    await copyPwaRemoteAsset("manifest.json");
+    await copyPwaRemoteAsset("favicon.png");
+  } else {
+    throw "unimplemented protocol: " + baseUrl.protocol;
+  }
 };
 
 if (import.meta.main) {
