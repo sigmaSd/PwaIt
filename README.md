@@ -67,3 +67,10 @@ export default function Home() {
 - Use chromium instead of firefox for this, firefox support seems to be
   intentionally incomplete
 - open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
+
+## Why
+
+To have a nice loading screen in mobile
+
+https://github.com/sigmaSd/ytdlf
+![ytdown](https://user-images.githubusercontent.com/22427111/194713700-d9b7a592-4165-4b3b-b5eb-f370785c1f22.png)
