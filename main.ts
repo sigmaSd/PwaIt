@@ -4,7 +4,6 @@ const main = async () => {
   ensureDirSync("./static/pwa");
 
   const mainUrl = import.meta.url;
-
   const baseUrl = new URL(mainUrl.slice(0, mainUrl.lastIndexOf("/")));
   if (baseUrl.protocol === "file:") {
     // stuff
@@ -23,6 +22,14 @@ const main = async () => {
   } else {
     throw "unimplemented protocol: " + baseUrl.protocol;
   }
+
+  Deno.writeTextFileSync(
+    "./static/serviceWorker.js",
+    /*javascript*/ `self.addEventListener("fetch", () => {
+      // needed to make the app installable
+    });
+`,
+  );
 };
 
 if (import.meta.main) {
