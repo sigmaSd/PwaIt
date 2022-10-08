@@ -4,6 +4,7 @@ const main = async () => {
   ensureDirSync("./static/pwa");
 
   const mainUrl = import.meta.url;
+
   const baseUrl = new URL(mainUrl.slice(0, mainUrl.lastIndexOf("/")));
   if (baseUrl.protocol === "file:") {
     // stuff
