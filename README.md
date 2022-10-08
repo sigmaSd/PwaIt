@@ -34,7 +34,7 @@ The rest depends on your project, see the next section for examples.
 - Add the needed header in one of your entry routes for example
   `routs/index.tsx` or `routes/_app.tsx`
 
-```typescriptreact
+```jsx
 import { Head } from "$fresh/runtime.ts";
 
 export default function Home() {
