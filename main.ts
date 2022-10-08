@@ -9,9 +9,9 @@ const main = async () => {
     throw "this script is intended to be used remotely for now";
   } else if (baseUrl.protocol === "https:") {
     const copyPwaRemoteAsset = async (name: string) => {
-      await fetch(baseUrl.href + "/" + name).then((r) =>
+      await fetch(baseUrl.href + "/pwa/" + name).then((r) =>
         r.body?.pipeTo(
-          Deno.createSync("./static/pwa" + "/" + name).writable,
+          Deno.createSync("./static/pwa/" + name).writable,
         )
       );
     };

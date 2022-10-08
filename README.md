@@ -45,7 +45,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <script defer src="/pwa/app.js" />
-      <button> Ok! </button>
+      <button>Ok!</button>
     </div>
   );
 }
