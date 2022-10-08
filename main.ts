@@ -1,7 +1,7 @@
 import { ensureDirSync } from "https://deno.land/std@0.152.0/fs/ensure_dir.ts";
 
 const main = async () => {
-  ensureDirSync("./static");
+  ensureDirSync("./static/pwa");
 
   const mainUrl = import.meta.url;
   const baseUrl = new URL(mainUrl.slice(0, mainUrl.lastIndexOf("/")));
