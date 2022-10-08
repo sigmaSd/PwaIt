@@ -64,8 +64,9 @@ export default function Home() {
 
 ## Tips
 
-- Use chromium instead of firefox for this, firefox support seems to be
-  intentionally incomplete
+- For developping, use chromium
+- For installing the application on mobile use chrome, it has the most advanced implementation
+
 - open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
 
 ## Why
