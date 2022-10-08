@@ -70,7 +70,7 @@ export default function Home() {
 
 ## Why
 
-To have a nice loading screen on mobile
+To have a nice loading screen on mobile, also support for [share-target](https://web.dev/web-share-target/)
 
 https://github.com/sigmaSd/ytdlf
 ![ytdown](https://user-images.githubusercontent.com/22427111/194713700-d9b7a592-4165-4b3b-b5eb-f370785c1f22.png)
