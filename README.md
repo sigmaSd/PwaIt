@@ -4,7 +4,9 @@ Script to kick start pwa app
 
 ## Usage
 
-`deno run -r https://github.com/sigmaSd/PwaIt/raw/master/main.ts`
+```
+deno run -r https://github.com/sigmaSd/PwaIt/raw/master/main.ts
+```
 
 This will create a static folder that contains most of the needed files.
 
