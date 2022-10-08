@@ -40,7 +40,7 @@ The rest depends on your project, see the next section for examples.
 **deno fresh project:**
 
 - Run the script inside the project root directory
-- Add the needed header in one of your entry routes for example
+- Add the needed manifest link + script in one of your entry routes for example
   `routs/index.tsx` or `routes/_app.tsx`
 
 ```jsx
