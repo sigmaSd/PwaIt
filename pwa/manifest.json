@@ -1,0 +1,12 @@
+{
+  "name": "Youtube Downloder",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/pwa/favicon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ]
+}
