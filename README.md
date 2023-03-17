@@ -68,7 +68,7 @@ export default function Home() {
 - For installing the application on mobile use chrome, it has the most advanced implementation
 
 - open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
-
+- For some reason the port matters, 8000 works but when I tried another port it failed
 ## Why
 
 To have a nice loading screen on mobile, also support for [share-target](https://web.dev/web-share-target/)
