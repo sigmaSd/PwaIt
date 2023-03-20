@@ -22,6 +22,7 @@ The rest depends on your project, see the next section for examples.
 ```html
 <script defer src="/pwa/app.js"></script>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/pwa/manifest.json" />
 </head>
 <h1>hello</h1>
