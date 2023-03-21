@@ -65,7 +65,7 @@ export default function Home() {
 
 **Svelte**
 - Move the created pwa and sw.js to `public` folder
-- Copy the index.html from the `Simple web app` example above
+- Copy the `index.html` from the `Simple web app` example above to `public` folder
 
 ## Enable offline usage
 
