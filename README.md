@@ -62,6 +62,11 @@ export default function Home() {
 - Run `deno task start`
 - open `localhost:8000`
 
+
+**Svelte**
+- Move the created pwa and sw.js to `public` folder
+- Copy the index.html from the `Simple web app` example above
+
 ## Enable offline usage
 
 Open the created `sw.js` and uncomment the relevent lines, be sure to read
