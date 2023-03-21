@@ -26,18 +26,6 @@ The rest depends on your project, see the next section for examples.
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/pwa/manifest.json" />
-    
-    <script type="text/javascript">
-    var navigator = window.navigator;
-    if (navigator && navigator.serviceWorker) {
-      navigator.serviceWorker.getRegistrations().then(function (registrations) {
-        registrations.forEach(function (registration) {
-          registration.unregister();
-        });
-      });
-    }
-  </script>
-
 </head>
 <h1>hello</h1>
 ```
@@ -64,17 +52,6 @@ export default function Home() {
       <Head>
         <link rel="manifest" href="/pwa/manifest.json" />
       </Head>
-      <script type="text/javascript">
-        var navigator = window.navigator;
-        if (navigator && navigator.serviceWorker) {
-          navigator.serviceWorker.getRegistrations().then(function (registrations) {
-            registrations.forEach(function (registration) {
-              registration.unregister();
-            });
-          });
-        }
-  </script>
-
       <script defer src="/pwa/app.js" />
       <button>Ok!</button>
     </div>
@@ -111,7 +88,7 @@ through the linked mdn link there.
   it work offline, now anytime I open localhost:8000 it gets redirected to the
   app even if I open a server in some new location, android chrome doesn't seem
   to have this issue
-- FIXED: (The examples now unregister all service workers at start) | OLD issue: To update the app for now you have to manually unregister the service worker: when you go to the site, open the console and unregister the service worker in the Application tab, in android chrome go to settings, and click on clear site date
+- To update the app for now you have to manually unregister the service worker: when you go to the site, open the console and unregister the service worker in the Application tab, in android chrome go to settings, and click on clear site date
 
 ## Why
 
