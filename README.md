@@ -81,9 +81,8 @@ through the linked mdn link there.
 - open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
 - For some reason port 8000 seems to matter, It didn't work with a different
   port
-- For offline usage the cache should be cleared with the activate singal, but
-  Its not clear if this really gets triggered, you can always change the
-  cacheName to make sure the app gets updated
+- For offline usage the cache should be cleared with the activate singal, <del>but
+  Its not clear if this really gets triggered</del>. the app gets updated and the *old* caches gets cleared by changing the cacheName 
 - Something annoying about chromium in linux, is if I cache a pwa app, and make
   it work offline, now anytime I open localhost:8000 it gets redirected to the
   app even if I open a server in some new location, android chrome doesn't seem
