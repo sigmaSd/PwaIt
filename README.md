@@ -10,7 +10,7 @@ Run on the root of your project
 deno run -r https://github.com/sigmaSd/PwaIt/raw/master/main.ts
 ```
 
-This will create sw.js and pwa folder.
+This will create `sw.js` and `pwa` folder.
 
 The rest depends on your project, see the next section for examples.
 
@@ -67,10 +67,9 @@ export default function Home() {
 - Move the created pwa and sw.js to `public` folder
 - Copy the relevent lines from `index.html` from the `Simple web app` to svelte index.html
 
-## Enable offline usage
+## Offline usage
 
-Open the created `sw.js` and uncomment the relevent lines, be sure to read
-through the linked mdn link there.
+The app will cache all requests by default whenever there is network so it can work offline. This behaviour is defined in `sw.js`
 
 ## Tips
 
@@ -79,15 +78,7 @@ through the linked mdn link there.
   implementation
 
 - open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
-- For some reason port 8000 seems to matter, It didn't work with a different
-  port
-- For offline usage the cache should be cleared with the activate singal, <del>but
-  Its not clear if this really gets triggered</del>. the app gets updated and the *old* caches gets cleared by changing the cacheName 
-- Something annoying about chromium in linux, is if I cache a pwa app, and make
-  it work offline, now anytime I open localhost:8000 it gets redirected to the
-  app even if I open a server in some new location, android chrome doesn't seem
-  to have this issue
-- To update the app for now you have to manually unregister the service worker: when you go to the site, open the console and unregister the service worker in the Application tab, in android chrome go to settings, and click on clear site date
+- To update the app sometimes you have to manually unregister the service worker: when you go to the site, open the console and unregister the service worker in the Application tab, in android chrome go to settings, and click on clear site date
 
 ## Why
 
@@ -99,4 +90,4 @@ https://github.com/sigmaSd/ytdlf
 
 ## More examples
 
-- https://github.com/sigmaSd/datediff https://datediff.deno.dev/
+- https://github.com/sigmaSd/datediff https://datediff.deno.dev/ https://github.com/sigmaSd/magic-cam
