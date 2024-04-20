@@ -29,6 +29,24 @@ const main = async () => {
       Deno.createSync("sw.js").writable,
     )
   );
+
+  console.log(
+    "`sw.js` `pwa` have been downloaed to cwd, to make pwa work follow the next steps:",
+  );
+  console.log();
+  console.log(
+    "- Make sure `sw.js` and `pwa` are acessible from the root of your site",
+  );
+  console.log();
+  console.log("- Modify `pwa/manifest.json` as you like");
+  console.log();
+  console.log("- Add the next lines to your `index.html` to activate pwa");
+  console.log(`\
+<script defer src="/pwa/app.js"></script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/pwa/manifest.json" />
+</head>`);
 };
 
 if (import.meta.main) {
