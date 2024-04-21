@@ -12,9 +12,9 @@ const main = async () => {
   const baseUrl = new URL(mainUrl.slice(0, mainUrl.lastIndexOf("/")));
 
   const copyPwaAsset = async (name: string) => {
-    await fetch(baseUrl.href + "/assets/pwa/" + name).then((r) =>
+    await fetch(`${baseUrl.href}/assets/pwa/${name}`).then((r) =>
       r.body?.pipeTo(
-        Deno.createSync("./pwa/" + name).writable,
+        Deno.createSync(`./pwa/${name}`).writable,
       )
     );
   };
@@ -24,7 +24,7 @@ const main = async () => {
   await copyPwaAsset("favicon.png");
   // write service worker
   // we're going to give it scope / so it needs to be in the root of the repo
-  await fetch(baseUrl.href + "/assets/sw.js").then((r) =>
+  await fetch(`${baseUrl.href}/assets/sw.js`).then((r) =>
     r.body?.pipeTo(
       Deno.createSync("sw.js").writable,
     )
@@ -42,11 +42,11 @@ const main = async () => {
   console.log();
   console.log("- Add the next lines to your `index.html` to activate pwa");
   console.log(`\
-<script defer src="/pwa/app.js"></script>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/pwa/manifest.json" />
-</head>`);
+</head>
+<script defer src="/pwa/app.js"></script>`);
 };
 
 if (import.meta.main) {
