@@ -62,14 +62,16 @@ export default function Home() {
 - Run `deno task start`
 - open `localhost:8000`
 
-
 **Svelte**
+
 - Move the created pwa and sw.js to `public` folder
-- Copy the relevent lines from `index.html` from the `Simple web app` to svelte index.html
+- Copy the relevent lines from `index.html` from the `Simple web app` to svelte
+  index.html
 
 ## Offline usage
 
-The app will cache all requests by default whenever there is network so it can work offline. This behaviour is defined in `sw.js`
+The app will cache all requests by default whenever there is network so it can
+work offline. This behaviour is defined in `sw.js`
 
 ## Tips
 
@@ -78,7 +80,10 @@ The app will cache all requests by default whenever there is network so it can w
   implementation
 
 - open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
-- To update the app sometimes you have to manually unregister the service worker: when you go to the site, open the console and unregister the service worker in the Application tab, in android chrome go to settings, and click on clear site date
+- To update the app sometimes you have to manually unregister the service
+  worker: when you go to the site, open the console and unregister the service
+  worker in the Application tab, in android chrome go to settings, and click on
+  clear site date
 
 ## Why
 
@@ -90,4 +95,5 @@ https://github.com/sigmaSd/ytdlf
 
 ## More examples
 
-- https://github.com/sigmaSd/datediff https://datediff.deno.dev/ https://github.com/sigmaSd/magic-cam
+- https://github.com/sigmaSd/datediff https://datediff.deno.dev/
+  https://github.com/sigmaSd/magic-cam
