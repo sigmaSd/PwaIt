@@ -71,7 +71,8 @@ export default function Home() {
 ## Offline usage
 
 The app will cache all requests by default whenever there is network so it can
-work offline. This behaviour is defined in `sw.js`
+work offline. This behaviour is defined in `sw.js`. When a network connection is
+available it will automaticly override the cache with the newer remote resources.
 
 ## Tips
 
@@ -79,9 +80,9 @@ work offline. This behaviour is defined in `sw.js`
 - For installing the application on mobile use chrome, it has the most advanced
   implementation
 
-- open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
-- To update the app sometimes you have to manually unregister the service
-  worker: when you go to the site, open the console and unregister the service
+- Open `localhost:8000` not `0.0.0.0:8000` pwa are sensitive to insecure pages
+- If you hack on `sw.js` sometimes bug happens and you have to manually unregister the service
+  worker. To do that go to the site, open the console and unregister the service
   worker in the Application tab, in android chrome go to settings, and click on
   clear site date
 
@@ -96,4 +97,9 @@ https://github.com/sigmaSd/ytdlf
 ## More examples
 
 - https://github.com/sigmaSd/datediff https://datediff.deno.dev/
-  https://github.com/sigmaSd/magic-cam
+- https://github.com/sigmaSd/magic-cam
+
+## More Info about PWA
+- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
+- https://whatpwacando.today/
