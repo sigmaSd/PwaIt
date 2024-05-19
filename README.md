@@ -97,7 +97,7 @@ https://github.com/sigmaSd/ytdlf
 ## More examples
 
 - https://github.com/sigmaSd/datediff https://datediff.deno.dev/
-- https://github.com/sigmaSd/magic-cam
+- https://github.com/sigmaSd/magic-cam https://magic-cam.deno.dev/
 
 ## More Info about PWA
 - https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
