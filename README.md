@@ -85,11 +85,12 @@ available it will automaticly override the cache with the newer remote resources
   worker. To do that go to the site, open the console and unregister the service
   worker in the Application tab, in android chrome go to settings, and click on
   clear site date
+- Firefox doesn't prompt for installing PWAs like chrome, instead it shows on the right menu "Add app to Home screen" instead of the "Add to home screen" for non pwa sites.
 
 ## Why
 
 To have a nice loading screen on mobile, also support for
-[share-target](https://web.dev/web-share-target/)
+[share-target](https://web.dev/web-share-target/) and other pwa APIs.
 
 https://github.com/sigmaSd/ytdlf
 ![ytdown](https://user-images.githubusercontent.com/22427111/194713700-d9b7a592-4165-4b3b-b5eb-f370785c1f22.png)
